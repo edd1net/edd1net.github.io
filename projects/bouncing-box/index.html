@@ -66,6 +66,9 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
+			var PositionX = 0;
+			var points = 0;
+			var speed = 10
 
 
 
@@ -74,8 +77,15 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
-
+			function update() { 
+				PositionX = PositionX + speed;
+				moveBoxTo(PositionX)
+				if(PositionX > boardWidth){
+					speed = -speed;
+				}
+             if(PositionX < 0){
+				speed = speed * -1
+			 }
 
 			};
 
@@ -85,6 +95,15 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				PositionX = 0;
+				points++
+				changeBoxText(points)
+				if(speed > 0){
+					speed = speed +3
+				}else if (speed < 0){
+					speed = speed - 3
+				}
+
 
 
 			};
