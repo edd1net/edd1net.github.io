@@ -1,4 +1,4 @@
-(function () {
+$(function () {
   // initialize canvas and context when able to
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
@@ -28,7 +28,7 @@
      * Comment the function call out to remove the grid
      */
 
-    // drawGrid();
+    // drawGrid(); 
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -39,6 +39,14 @@
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
 
+    createPlatform(80, 300, 90, 46); 
+    createPlatform(200, 200, 90, 46);
+    createPlatform(400, 200, 90, 46);
+    createPlatform(700, 200, 90, 46);
+    createPlatform(1000, 200, 90, 46);
+
+   
+
 
 
     
@@ -48,7 +56,8 @@
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-
+   createCollectable(coins, 100, 700, 30, arrows )
+  
 
     
     // TODO 3
@@ -56,7 +65,9 @@
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
+    createCannon(leFt,down,)
 
+   
 
 
     
